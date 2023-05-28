@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
-import { aboutUs, slow } from '@/public';
+import { aboutUs, slow, chickens } from '@/public';
 
 export default function Home() {
   return (
@@ -86,23 +86,27 @@ export default function Home() {
       <main className="bg-orange-200">
         <div className="mx-auto max-w-7xl">
           <section id="about-us" className="flex items-center">
-            <div className="flex h-full flex-1 flex-col">
-              <p className="text-lg italic text-black/80">- About Us -</p>
-              <h2 className="mt-9 text-6xl font-semibold">
-                Welcome to{' '}
-                <span className="relative mr-1 inline-block before:absolute before:-inset-x-1 before:-inset-y-[1px] before:block before:-skew-y-3 before:bg-orange-400 hover:scale-105">
-                  <span className="relative font-semibold">Thicken Thighs</span>
-                </span>
-                : Where Chickens Are Our Superstars!
-              </h2>
-              <p className="mx-auto my-10 text-lg leading-loose text-black/80">
-                At Thicken Thighs, we take pride in being the premier slow food
-                restaurant in the industry. Our commitment to slowness and
-                chicken-centric cuisine sets us apart. With the quality come
-                from the slowest staffs and thickest chickens, we&apos;re here
-                to serve up a memorable dining experience that will leave you
-                clucking for more!
-              </p>
+            <div className="flex-1">
+              <div className="flex flex-col px-10">
+                <p className="text-lg italic text-black/80">- About Us -</p>
+                <h2 className="mt-9 text-6xl font-semibold">
+                  Welcome to{' '}
+                  <span className="relative mr-1 inline-block before:absolute before:-inset-x-1 before:-inset-y-[1px] before:block before:-skew-y-3 before:bg-orange-400 hover:scale-105">
+                    <span className="relative font-semibold">
+                      Thicken Thighs
+                    </span>
+                  </span>
+                  : Where Chickens Are Our Superstars!
+                </h2>
+                <p className="mx-auto my-10 text-lg leading-loose text-black/80">
+                  At Thicken Thighs, we take pride in being the premier
+                  slow-food restaurant in the industry. Our commitment to
+                  slowness and chicken-centric cuisine sets us apart. With the
+                  quality coming from the slowest staff and thickest chickens,
+                  we&apos;re here to serve up a memorable dining experience that
+                  will leave you clucking for more!
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-1">
@@ -110,36 +114,54 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about-us" className="flex flex-row-reverse items-center">
-            <div className="flex h-full flex-1 flex-col">
-              <p className="text-lg italic text-black/80">- Commitment -</p>
-              <h2 className="mt-9 text-6xl font-semibold">
-                Our Commitment to Slowness
-              </h2>
-              <p className="mx-auto my-10 text-lg leading-loose text-black/80">
-                We&apos;ve mastered the art of slow cooking, taking our time to
-                craft dishes that burst with amazing flavors. We&apos;re not
-                just slow, we&apos;re award-winningly slow! Join us on a
-                culinary adventure where every bite is worth the wait.
-              </p>
+          <section
+            id="commitment"
+            className="flex flex-row-reverse items-center"
+          >
+            <div className="flex-1">
+              <div className="flex flex-col px-10">
+                <p className="text-lg italic text-black/80">- Commitment -</p>
+                <h2 className="mt-9 text-6xl font-semibold">
+                  Our Commitment to Slowness
+                </h2>
+                <p className="mx-auto my-10 text-lg leading-loose text-black/80">
+                  You won&apos;t find a restaurant slower than us — seriously,
+                  we&apos;ve won awards for it! We take our time with each and
+                  every meal, ensuring that the flavors develop at a
+                  snail&apos;s pace to reach maximum deliciousness.! Join us on
+                  a culinary adventure where every bite is worth the wait.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-1">
-              <Image src={slow} alt="Inside a restaurant" />
+              <Image src={slow} alt="A snail on a long leaf" />
+            </div>
+          </section>
+
+          <section id="profits" className="flex items-center">
+            <div className="flex-1">
+              <div className="flex flex-col px-10">
+                <p className="text-lg italic text-black/80">- Profits -</p>
+                <h2 className="mt-9 text-6xl font-semibold">
+                  Chicken Reproduction Fund
+                </h2>
+                <p className="mx-auto my-10 text-lg leading-loose text-black/80">
+                  At Thicken Thighs, our profits are dedicated to supporting our
+                  backyard chickens. By dining with us, you contribute to their
+                  romantic endeavors. Please be patient, as our feathered
+                  friends need time to do their thing — reproduce. It&apos;s all
+                  part of our commitment to sustainable poultry practices.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-1">
+              <Image src={chickens} alt="Chickens in a garden" />
             </div>
           </section>
 
           <section>
-            <h2 className="mb-3 text-2xl">Chicken Reproduction Fund</h2>
-
-            <p className="mb-5">
-              At Thicken Thighs, our profits are dedicated to supporting our
-              backyard chickens. By dining with us, you contribute to their
-              romantic endeavors. Please be patient, as our feathered friends
-              need time to do their thing—reproduce. It&apos;s all part of our
-              commitment to sustainable poultry practices.
-            </p>
-
             <h2 className="mb-3 text-2xl">Introducing Our Free Menu</h2>
 
             <div className="flex flex-wrap justify-between">
