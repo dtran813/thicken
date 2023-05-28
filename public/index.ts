@@ -2,4 +2,17 @@ import aboutUs from './aboutUs.jpg';
 import slow from './slow.jpg';
 import chickens from './chickens.jpg';
 
-export { aboutUs, slow, chickens };
+import egg from './free-menu/egg.jpg';
+import chickenHeart from './free-menu/chicken-heart.jpg';
+import chickenLiver from './free-menu/chicken-liver.jpg';
+import chickenKids from './free-menu/chicken-kids.jpg';
+
+export {
+  aboutUs,
+  slow,
+  chickens,
+  egg,
+  chickenHeart,
+  chickenLiver,
+  chickenKids,
+};
