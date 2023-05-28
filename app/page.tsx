@@ -1,7 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
-import { aboutUs, slow, chickens } from '@/public';
+import {
+  aboutUs,
+  slow,
+  chickens,
+  egg,
+  chickenHeart,
+  chickenKids,
+} from '@/public';
 
 export default function Home() {
   return (
@@ -173,39 +180,76 @@ export default function Home() {
               free menu to our customers
             </p>
 
-            <div className="flex flex-wrap justify-between">
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3 className="mt-0 text-xl">Chicken Egg</h3>
-                <p className="mb-5">
-                  A delicately cooked egg straight from the source. Breakfast
-                  and dinner collide in this delectable treat.
-                </p>
+            <div className="mt-10 flex flex-wrap justify-center">
+              <div className="border border-dotted border-black p-10">
+                <div className="w-80">
+                  <div className="h-56">
+                    <Image
+                      src={egg}
+                      alt="Sunny side-up egg"
+                      className="rounded-md"
+                    />
+                  </div>
+
+                  <div className="mt-6">
+                    <h3 className="text-3xl font-bold text-black/80">
+                      Chicken Egg
+                    </h3>
+                    <p className="mt-3 text-lg text-black/70">
+                      A delicately cooked egg straight from the source.
+                      Breakfast and dinner collide in this delectable treat.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3 className="mt-0 text-xl">Chicken Hearts</h3>
-                <p className="mb-5">
-                  Embark on a culinary adventure with our unconventional
-                  offering. This dish is for the bold and daring!
-                </p>
+
+              <div className="border border-dotted border-black p-10">
+                <div className="w-80">
+                  <div className="h-56">
+                    <Image
+                      src={chickenHeart}
+                      alt="Chicken Hearts Teriyaki"
+                      className="rounded-md"
+                    />
+                  </div>
+
+                  <div className="mt-6">
+                    <h3 className="text-3xl font-bold text-black/80">
+                      Chicken Hearts
+                    </h3>
+                    <p className="mt-3 text-lg text-black/70">
+                      Embark on a culinary adventure with our unconventional
+                      offering. This dish is for the bold and daring!
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3 className="mt-0 text-xl">Chicken Head</h3>
-                <p className="mb-5">
-                  Make a lasting impression with this unique delicacy
-                  that&apos;ll leave you clucking for more.
-                </p>
-              </div>
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3 className="mt-0 text-xl">Chicken Kids</h3>
-                <p className="mb-5">
-                  We recommend adopting these adorable chicks instead of eating
-                  them. They&apos;re for cuddles, not consumption!
-                </p>
+
+              <div className="border border-dotted border-black p-10">
+                <div className="w-80">
+                  <div className="h-56">
+                    <Image
+                      src={chickenKids}
+                      alt="Baby chickens"
+                      className="rounded-md"
+                    />
+                  </div>
+
+                  <div className="mt-6">
+                    <h3 className="text-3xl font-bold text-black/80">
+                      Chicken Kids
+                    </h3>
+                    <p className="mt-3 text-lg text-black/70">
+                      We recommend adopting these adorable chicks instead of
+                      eating them. They&apos;re for cuddles, not consumption!
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
-          <section>
+          <section className="mt-20 border-t-2 border-dotted border-orange-600 pt-10">
             <h2 className="mb-3 text-2xl">Special Sauce Extravaganza</h2>
 
             <div className="flex flex-wrap justify-between">
