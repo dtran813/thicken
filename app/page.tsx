@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
+import { CiWarning } from 'react-icons/ci';
 import {
   aboutUs,
   slow,
@@ -82,7 +83,7 @@ export default function Home() {
               will have you questioning the meaning of haste in the most
               outrageously delicious way possible.
             </p>
-            <button className="mt-4 w-fit rounded-bl-md rounded-br-2xl rounded-tl-2xl rounded-tr-md bg-orange-400  p-3 text-lg text-white transition hover:scale-105 active:translate-y-1 sm:p-4">
+            <button className="mt-4 w-fit rounded-bl-md rounded-br-2xl rounded-tl-2xl rounded-tr-md bg-orange-400  p-3 text-lg text-white/90 transition hover:scale-105 active:translate-y-1 sm:p-4">
               Make A Reservation
             </button>
           </div>
@@ -246,6 +247,21 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-10 flex items-center justify-center">
+              <CiWarning size={30} className="text-red-600" />
+              <p className="mx-3 text-center text-lg font-semibold italic text-red-600">
+                Our free menu is limited, so please check with our slow AF staff
+                for availability
+              </p>
+              <CiWarning size={30} className="text-red-600" />
+            </div>
+
+            <div className="mt-10 flex justify-center">
+              <button className="mt-4 w-fit rounded-bl-md rounded-br-2xl rounded-tl-2xl rounded-tr-md bg-orange-400  p-3 text-lg text-white/90 transition hover:scale-105 active:translate-y-1 sm:p-4">
+                Explore Money Out Of The Bank Menu
+              </button>
             </div>
           </section>
 
