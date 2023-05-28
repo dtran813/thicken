@@ -4,8 +4,8 @@ import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
 export default function Home() {
   return (
     <>
-      <header className="h-screen bg-hero bg-cover bg-center bg-no-repeat">
-        <div className="flex items-center bg-slate-200/75 p-5">
+      <header className="flex h-screen flex-col bg-hero bg-cover bg-center bg-no-repeat">
+        <div className="flex items-center bg-orange-200/75 p-5">
           <div className="flex flex-1 justify-start">
             <h1 className="text-2xl font-bold">
               <Link href="/">Thicken Thighs</Link>
@@ -57,6 +57,24 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <section className="flex h-full p-10">
+          <div className="m-auto flex max-w-xl flex-col xl:max-w-3xl">
+            <p className="mb-10 text-3xl font-bold text-white sm:text-5xl md:text-6xl xl:text-7xl">
+              <span className="block">Unleash Boldness,</span>
+              <span className="mt-3 block">Embrace Slowness.</span>
+            </p>
+            <p className="mb-10 text-base text-white/80 sm:text-xl">
+              At <span>Thicken Thighs</span>, you need to prepare for a culinary
+              adventure that is so slow, it will have you questioning the
+              meaning of haste in the most outrageously delicious way possible.
+            </p>
+            <button className="mt-4 w-fit rounded-bl-3xl rounded-br-md rounded-tl-md rounded-tr-3xl bg-orange-400  p-3 text-lg text-white sm:p-4">
+              Make A Reservation
+            </button>
+          </div>
+          <div className="hidden flex-1 md:block"></div>
+        </section>
       </header>
 
       <section className="m-5">
