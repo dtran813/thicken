@@ -4,55 +4,57 @@ import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
 export default function Home() {
   return (
     <>
-      <header className="flex items-center bg-orange-400 p-5">
-        <div className="flex flex-1 justify-start">
-          <h1 className="text-3xl font-bold">
-            <Link href="/">Thicken Thighs</Link>
-          </h1>
-        </div>
+      <header className="h-screen bg-hero bg-cover bg-center bg-no-repeat">
+        <div className="flex items-center bg-slate-200/75 p-5">
+          <div className="flex flex-1 justify-start">
+            <h1 className="text-2xl font-bold">
+              <Link href="/">Thicken Thighs</Link>
+            </h1>
+          </div>
 
-        <nav className="flex flex-1 justify-center">
-          <ul className="flex w-full list-none justify-between">
-            <li className="inline-block">
-              <Link href="#" className="px-3 py-1 text-lg font-medium">
-                Home
-              </Link>
-            </li>
-            <li className="inline-block">
-              <Link href="#" className="px-3 py-1 text-lg font-medium">
-                Menu
-              </Link>
-            </li>
-            <li className="inline-block">
-              <Link href="#" className="px-3 py-1 text-lg font-medium">
-                About
-              </Link>
-            </li>
-            <li className="inline-block">
-              <Link href="#" className="px-3 py-1 text-lg font-medium">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
+          <nav className="flex flex-1 justify-center">
+            <ul className="flex w-full list-none justify-between">
+              <li className="inline-block">
+                <Link href="#" className="px-3 py-1 text-lg font-medium">
+                  Home
+                </Link>
+              </li>
+              <li className="inline-block">
+                <Link href="#" className="px-3 py-1 text-lg font-medium">
+                  Menu
+                </Link>
+              </li>
+              <li className="inline-block">
+                <Link href="#" className="px-3 py-1 text-lg font-medium">
+                  About
+                </Link>
+              </li>
+              <li className="inline-block">
+                <Link href="#" className="px-3 py-1 text-lg font-medium">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-        <div className="flex flex-1 justify-end">
-          <div className="flex w-40 justify-between">
-            <Link href="/">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
-                <FiInstagram size={22} />
-              </span>
-            </Link>
-            <Link href="/">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
-                <FiFacebook size={22} />
-              </span>
-            </Link>
-            <Link href="/">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
-                <FiTwitter size={22} />
-              </span>
-            </Link>
+          <div className="flex flex-1 justify-end">
+            <div className="flex w-40 justify-between">
+              <Link href="/">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
+                  <FiInstagram size={22} />
+                </span>
+              </Link>
+              <Link href="/">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
+                  <FiFacebook size={22} />
+                </span>
+              </Link>
+              <Link href="/">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
+                  <FiTwitter size={22} />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
