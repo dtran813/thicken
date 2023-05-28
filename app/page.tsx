@@ -178,7 +178,7 @@ export default function Home() {
             </h2>
             <p className="mt-3 text-center text-xl leading-loose text-black/70">
               We do things differently. That&apos;s why we offer this lovely
-              free menu to our customers
+              free menu to our customers.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center">
@@ -253,7 +253,7 @@ export default function Home() {
               <CiWarning size={30} className="text-red-600" />
               <p className="mx-3 text-center text-lg font-semibold italic text-red-600">
                 Our free menu is limited, so please check with our slow AF staff
-                for availability
+                for availability.
               </p>
               <CiWarning size={30} className="text-red-600" />
             </div>
@@ -265,40 +265,61 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="mt-20 border-t-2 border-dotted border-orange-600 pt-10">
-            <h2 className="mb-3 text-2xl">Special Sauce Extravaganza</h2>
+          <section
+            id="sauces"
+            className="mt-20 border-t-2 border-dashed border-orange-600 pt-10"
+          >
+            <h2 className="mb-3 text-center text-6xl font-semibold">
+              Special Sauce Extravaganza
+            </h2>
+            <p className="mt-3 text-center text-xl leading-loose text-black/70">
+              Ketchup? Honey Mustard? BBQ? Boring. Let&apos;s see what we offer.
+            </p>
 
-            <div className="flex flex-wrap justify-between">
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3>Walnut Honey Skunk</h3>
-                <p className="mb-5">
+            <div className="mt-10 flex flex-wrap justify-center">
+              <div className="w-[500px] p-5">
+                <h3 className="text-3xl font-bold text-black/80">
+                  Walnut Honey Skunk
+                </h3>
+                <p className="mt-3 text-lg text-black/70">
                   A unique combination of walnut essence and the mysterious
                   aroma of a skunk.
                 </p>
               </div>
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3>Not Really A Special Sauce (Weak Sauce)</h3>
-                <p className="mb-5">
+
+              <div className="w-[500px] p-5">
+                <h3 className="text-3xl font-bold text-black/80">
+                  Not Really A Special Sauce (Weak Sauce)
+                </h3>
+                <p className="mt-3 text-lg text-black/70">
                   A sauce that challenges the boundaries of mediocrity. Prepare
                   for a taste adventure!
                 </p>
               </div>
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3>House Special Saliva</h3>
-                <p className="mb-5">
+
+              <div className="w-[500px] p-5">
+                <h3 className="text-3xl font-bold text-black/80">
+                  House Special Saliva
+                </h3>
+                <p className="mt-3 text-lg text-black/70">
                   A magical sauce crafted from unicorn saliva. It&apos;s
                   mystical, it&apos;s enchanting—it&apos;s one of a kind.
                 </p>
               </div>
-              <div className="mb-5 w-60 bg-gray-200 p-5">
-                <h3>More Special Than You Sauce</h3>
-                <p className="mb-5">
+
+              <div className="w-[500px] p-5">
+                <h3 className="text-3xl font-bold text-black/80">
+                  More Special Than You Sauce
+                </h3>
+                <p className="mt-3 text-lg text-black/70">
                   A sauce that outshines even the most special of individuals.
                   Brace yourself for an extraordinary experience!
                 </p>
               </div>
             </div>
           </section>
+
+          <section className="mt-20 border-t-2 border-dashed border-orange-600 pt-10"></section>
         </div>
       </main>
     </>
