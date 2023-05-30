@@ -1,15 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FiInstagram, FiTwitter, FiFacebook } from 'react-icons/fi';
-import { CiWarning } from 'react-icons/ci';
 import {
   aboutUs,
-  slow,
-  chickens,
-  egg,
   chickenHeart,
   chickenKids,
+  chickens,
+  egg,
+  slow,
 } from '@/public';
+import Image from 'next/image';
+import Link from 'next/link';
+import { CiWarning } from 'react-icons/ci';
+import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import SauceInfo from './components/SauceInfo';
+import { saucesInfo } from './constants';
 
 export default function Home() {
   return (
@@ -171,7 +173,7 @@ export default function Home() {
 
           <section
             id="freeMenu"
-            className="mt-20 border-t-2 border-dotted border-orange-600 pt-10"
+            className="mt-20 border-t-2 border-dashed border-orange-600 pt-10"
           >
             <h2 className="mb-3 text-center text-6xl font-semibold">
               Our Free Menu
@@ -277,45 +279,9 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center">
-              <div className="w-[500px] p-5">
-                <h3 className="text-3xl font-bold text-black/80">
-                  Walnut Honey Skunk
-                </h3>
-                <p className="mt-3 text-lg text-black/70">
-                  A unique combination of walnut essence and the mysterious
-                  aroma of a skunk.
-                </p>
-              </div>
-
-              <div className="w-[500px] p-5">
-                <h3 className="text-3xl font-bold text-black/80">
-                  Not Really A Special Sauce (Weak Sauce)
-                </h3>
-                <p className="mt-3 text-lg text-black/70">
-                  A sauce that challenges the boundaries of mediocrity. Prepare
-                  for a taste adventure!
-                </p>
-              </div>
-
-              <div className="w-[500px] p-5">
-                <h3 className="text-3xl font-bold text-black/80">
-                  House Special Saliva
-                </h3>
-                <p className="mt-3 text-lg text-black/70">
-                  A magical sauce crafted from unicorn saliva. It&apos;s
-                  mystical, it&apos;s enchanting—it&apos;s one of a kind.
-                </p>
-              </div>
-
-              <div className="w-[500px] p-5">
-                <h3 className="text-3xl font-bold text-black/80">
-                  More Special Than You Sauce
-                </h3>
-                <p className="mt-3 text-lg text-black/70">
-                  A sauce that outshines even the most special of individuals.
-                  Brace yourself for an extraordinary experience!
-                </p>
-              </div>
+              {saucesInfo.map(({ name, desc, imgSrc }) => (
+                <SauceInfo key={name} imgSrc={imgSrc} name={name} desc={desc} />
+              ))}
             </div>
           </section>
 
