@@ -10,9 +10,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CiWarning } from 'react-icons/ci';
 import Button from './components/Button';
+import Footer from './components/Footer';
 import SocialLinks from './components/SocialLinks';
 import ContactUs from './components/contactUs/page';
 import Sauces from './components/sauces/page';
+import { navLinks } from './constants';
 
 export default function Home() {
   return (
@@ -27,26 +29,16 @@ export default function Home() {
 
           <nav className="flex flex-1 justify-center">
             <ul className="flex w-full list-none justify-between">
-              <li className="inline-block">
-                <Link href="#" className="px-3 py-1 text-lg font-medium">
-                  Home
-                </Link>
-              </li>
-              <li className="inline-block">
-                <Link href="#" className="px-3 py-1 text-lg font-medium">
-                  Menu
-                </Link>
-              </li>
-              <li className="inline-block">
-                <Link href="#" className="px-3 py-1 text-lg font-medium">
-                  About
-                </Link>
-              </li>
-              <li className="inline-block">
-                <Link href="#" className="px-3 py-1 text-lg font-medium">
-                  Contact
-                </Link>
-              </li>
+              {navLinks.map((link) => (
+                <li key={link.label} className="inline-block">
+                  <Link
+                    href={link.url}
+                    className="px-3 py-1 text-lg font-medium"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -77,7 +69,7 @@ export default function Home() {
       </header>
 
       <main className="bg-orange-200">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl pb-10">
           <section id="aboutUs" className="flex items-center">
             <div className="flex-1">
               <div className="flex flex-col px-10">
@@ -253,6 +245,8 @@ export default function Home() {
           <ContactUs />
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

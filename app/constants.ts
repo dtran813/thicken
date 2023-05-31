@@ -6,13 +6,33 @@ import {
   FiPhone,
   FiTwitter,
 } from 'react-icons/fi';
+
+export const navLinks = [
+  {
+    url: '/',
+    label: 'Home',
+  },
+  {
+    url: '/menu',
+    label: 'Menu',
+  },
+  {
+    url: '/about',
+    label: 'About Us',
+  },
+  {
+    url: '/contact',
+    label: 'Contact Us',
+  },
+];
+
 export const socialLinks = [
   {
     url: 'tel:+123456789',
     icon: FiPhone,
   },
   {
-    url: 'mailto:thicken@gmail.com',
+    url: 'mailto:info@thicken.com',
     icon: FiMail,
   },
   {
