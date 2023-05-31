@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { CiWarning } from 'react-icons/ci';
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
 import Button from './components/Button';
+import Icon from './components/Icon';
 import ContactUs from './components/contactUs/page';
 import Sauces from './components/sauces/page';
 
@@ -53,19 +54,13 @@ export default function Home() {
           <div className="flex flex-1 justify-end">
             <div className="flex w-40 justify-between">
               <Link href="/">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
-                  <FiInstagram size={22} />
-                </span>
+                <Icon icon={FiInstagram} />
               </Link>
               <Link href="/">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
-                  <FiFacebook size={22} />
-                </span>
+                <Icon icon={FiFacebook} />
               </Link>
               <Link href="/">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black">
-                  <FiTwitter size={22} />
-                </span>
+                <Icon icon={FiTwitter} />
               </Link>
             </div>
           </div>
