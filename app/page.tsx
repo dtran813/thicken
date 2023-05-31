@@ -278,7 +278,7 @@ export default function Home() {
               Ketchup? Honey Mustard? BBQ? Boring. Let&apos;s see what we offer.
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center">
+            <div className="mt-10 flex flex-wrap justify-center gap-y-6 xl:gap-x-6">
               {saucesInfo.map(({ name, desc, imgSrc }) => (
                 <SauceInfo key={name} imgSrc={imgSrc} name={name} desc={desc} />
               ))}
