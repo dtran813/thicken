@@ -1,7 +1,7 @@
-import SocialLinks from '../SocialLinks';
+import SocialLinks from '../components/SocialLinks';
 import ContactUsForm from './ContactUsForm';
 
-const ContactUs = () => {
+const ContactUsPage = () => {
   return (
     <section
       id="contactUs"
@@ -18,4 +18,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactUsPage;

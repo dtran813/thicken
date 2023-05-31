@@ -12,9 +12,9 @@ import { CiWarning } from 'react-icons/ci';
 import Button from './components/Button';
 import Footer from './components/Footer';
 import SocialLinks from './components/SocialLinks';
-import ContactUs from './components/contactUs/page';
 import Sauces from './components/sauces/page';
 import { navLinks } from './constants';
+import ContactUs from './contactUs/page';
 
 export default function Home() {
   return (

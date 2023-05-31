@@ -17,11 +17,11 @@ export const navLinks = [
     label: 'Menu',
   },
   {
-    url: '/about',
+    url: '/aboutUs',
     label: 'About Us',
   },
   {
-    url: '/contact',
+    url: '/contactUs',
     label: 'Contact Us',
   },
 ];
