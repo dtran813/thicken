@@ -6,7 +6,7 @@ const SocialLinks = () => {
   return (
     <div className="flex w-[300px] justify-between">
       {socialLinks.map(({ url, icon }) => (
-        <Link key={url} href={url}>
+        <Link key={url} href={url} target="_blank">
           <Icon icon={icon} />
         </Link>
       ))}
