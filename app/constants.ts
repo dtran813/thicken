@@ -1,4 +1,33 @@
 import { saliva, special, walnut_honey, weak_sauce } from '@/public';
+import {
+  FiFacebook,
+  FiInstagram,
+  FiMail,
+  FiPhone,
+  FiTwitter,
+} from 'react-icons/fi';
+export const socialLinks = [
+  {
+    url: 'tel:+123456789',
+    icon: FiPhone,
+  },
+  {
+    url: 'mailto:thicken@gmail.com',
+    icon: FiMail,
+  },
+  {
+    url: 'https://instagram.com',
+    icon: FiInstagram,
+  },
+  {
+    url: 'https://facebook.com',
+    icon: FiFacebook,
+  },
+  {
+    url: 'https://twitter.com',
+    icon: FiTwitter,
+  },
+];
 
 export const saucesInfo = [
   {
