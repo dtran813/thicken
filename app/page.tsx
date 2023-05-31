@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CiWarning } from 'react-icons/ci';
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import Button from './components/Button';
 import ContactUs from './components/contactUs/page';
 import Sauces from './components/sauces/page';
 
@@ -85,9 +86,7 @@ export default function Home() {
               will have you questioning the meaning of haste in the most
               outrageously delicious way possible.
             </p>
-            <button className="mt-4 w-fit rounded-bl-md rounded-br-2xl rounded-tl-2xl rounded-tr-md bg-orange-400  p-3 text-lg text-white/90 transition hover:scale-105 active:translate-y-1 sm:p-4">
-              Make A Reservation
-            </button>
+            <Button>Make A Reservation</Button>
           </div>
           <div className="hidden flex-1 md:block"></div>
         </section>
@@ -261,9 +260,7 @@ export default function Home() {
             </div>
 
             <div className="mt-10 flex justify-center">
-              <button className="mt-4 w-fit rounded-bl-md rounded-br-2xl rounded-tl-2xl rounded-tr-md bg-orange-400  p-3 text-lg text-white/90 transition hover:scale-105 active:translate-y-1 sm:p-4">
-                Explore Money Out Of The Bank Menu
-              </button>
+              <Button>Explore Money Out Of The Bank Menu</Button>
             </div>
           </section>
 
