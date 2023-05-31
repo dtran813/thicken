@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CiWarning } from 'react-icons/ci';
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import ContactUs from './components/contactUs/page';
 import Sauces from './components/sauces/page';
 
 export default function Home() {
@@ -268,7 +269,7 @@ export default function Home() {
 
           <Sauces />
 
-          <section className="mt-20 border-t-2 border-dashed border-orange-600 pt-10"></section>
+          <ContactUs />
         </div>
       </main>
     </>
