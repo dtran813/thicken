@@ -1,3 +1,4 @@
+import Button from '../Button';
 import Input from '../Input';
 
 const ContactUsForm = () => {
@@ -10,7 +11,7 @@ const ContactUsForm = () => {
 
         <Input id="message" label="Message" required isTextarea />
 
-        <button>Submit</button>
+        <Button>Submit</Button>
       </form>
     </div>
   );
