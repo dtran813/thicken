@@ -47,8 +47,10 @@ const Footer = () => {
               <div className="mt-3 flex items-center">
                 <Icon icon={FiMapPin} color="rgb(0 0 0 / 0.7)" />
                 <p className="ml-3">
-                  1234 N Main St, <br />
-                  Mountain View, CA 12345
+                  Somewhere near Lake Tahoe, <br />
+                  <span className="mt-2 inline-block">
+                    Lake Tahoe, CA or NV, 99999
+                  </span>
                 </p>
               </div>
               <div className="mt-3 flex items-center">
