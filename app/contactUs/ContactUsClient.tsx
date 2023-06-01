@@ -5,9 +5,25 @@ import ContactUsSection from './ContactUsSection';
 const ContactUsClient = () => {
   return (
     <div className="bg-orange-200 py-20">
-      <div>
-        <h1 className="text-2xl font-bold uppercase">Contact Us</h1>
-        <p>We&apos;d love to hear from you!</p>
+      <div className="mx-auto max-w-7xl pb-10">
+        <div className="flex flex-col items-center border-b-2 border-orange-600 px-5 pb-10 md:flex-row">
+          <h1 className="mb-8 flex-1 text-5xl font-black uppercase tracking-tight md:mb-0 lg:text-6xl">
+            <span className="-mt-3 block opacity-90">Contact Us</span>
+            <span className="-mt-3 block opacity-60">Contact Us</span>
+            <span className="-mt-3 block opacity-30">Contact Us</span>
+            <span className="-mt-3 block opacity-10">Contact Us</span>
+          </h1>
+          <p className="flex-1 text-base text-black/70 sm:leading-loose lg:text-lg">
+            Have a question, suggestion, or just want to chat about all things
+            chicken? We&apos;re all ears (and wings)! Drop us a line using our
+            handy-dandy contact form below or reach out to us via carrier pigeon
+            if you prefer old-school communication. Our chicken-loving team is
+            ready to assist you with any inquiries or chicken-related musings
+            you may have. Don&apos;t be shy—whether you want to talk clucks or
+            discuss the secret to our super slow cooking, we&apos;re here to
+            make your chicken dreams come true!
+          </p>
+        </div>
       </div>
 
       <section id="getInTouch" className="flex flex-col md:flex-row">
