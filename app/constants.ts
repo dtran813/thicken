@@ -87,7 +87,7 @@ export const freeMenu = [
   },
   {
     name: 'Chicken Kids',
-    desc: 'We recommend adopting these adorable chicks instead of eating them. They&apos;re for cuddles, not consumption!',
+    desc: `We recommend adopting these adorable chicks instead of eating them. They're for cuddles, not consumption!`,
     imgSrc: chickenKids,
   },
 ];
