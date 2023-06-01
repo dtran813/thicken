@@ -7,6 +7,8 @@ import {
   FiTwitter,
 } from 'react-icons/fi';
 
+import { chickenHeart, chickenKids, egg } from '@/public';
+
 export const navLinks = [
   {
     url: '/',
@@ -69,5 +71,23 @@ export const saucesInfo = [
     name: 'More Special Than You Sauce',
     desc: 'A sauce that outshines even the most special of individuals. Brace yourself for an extraordinary experience!',
     imgSrc: special,
+  },
+];
+
+export const freeMenu = [
+  {
+    name: 'Chicken Egg',
+    desc: 'A delicately cooked egg straight from the source. Breakfast and dinner collide in this delectable treat.',
+    imgSrc: egg,
+  },
+  {
+    name: 'Chicken Hearts',
+    desc: 'Embark on a culinary adventure with our unconventional offering. This dish is for the bold and daring!',
+    imgSrc: chickenHeart,
+  },
+  {
+    name: 'Chicken Kids',
+    desc: 'We recommend adopting these adorable chicks instead of eating them. They&apos;re for cuddles, not consumption!',
+    imgSrc: chickenKids,
   },
 ];
