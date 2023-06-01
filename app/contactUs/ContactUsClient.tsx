@@ -12,8 +12,8 @@ const ContactUsClient = () => {
 
       <section id="getInTouch" className="flex flex-col md:flex-row">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4061358.305505924!2d-118.95415857750264!3d38.70420951029718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c74b7776ae8a47%3A0xccc9f07c7bf2b054!2sDeath%20Valley%20National%20Park!5e0!3m2!1sen!2sus!4v1685633983433!5m2!1sen!2sus"
-          width="600"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d160729.77455644606!2d-120.12713360256585!3d39.07773343096412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809978a1b91f1151%3A0x8c3f1fafeeafb520!2sLake%20Tahoe!5e0!3m2!1sen!2sus!4v1685651310948!5m2!1sen!2sus"
+          width="800"
           height="600"
           allowFullScreen={true}
           loading="lazy"
@@ -57,8 +57,10 @@ const ContactUsClient = () => {
                 <div className="ml-5">
                   <h3 className="text-xl font-semibold">Address:</h3>
                   <p className="mt-2 text-base text-black/70">
-                    Somewhere in Death Valley, <br />
-                    <span className="mt-2 inline-block">Skidoo, CA 92328</span>
+                    Somewhere near Lake Tahoe, <br />
+                    <span className="mt-2 inline-block">
+                      Lake Tahoe, CA or NV, 99999
+                    </span>
                   </p>
                 </div>
               </div>
