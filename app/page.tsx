@@ -9,9 +9,8 @@ import {
 import Image from 'next/image';
 import { CiWarning } from 'react-icons/ci';
 import Button from './components/Button';
-import Footer from './components/Footer';
 import Sauces from './components/sauces/page';
-import ContactUs from './contactUs/page';
+import ContactUsSection from './contactUs/ContactUsSection';
 
 export default function Home() {
   return (
@@ -215,11 +214,9 @@ export default function Home() {
 
           <Sauces />
 
-          <ContactUs />
+          <ContactUsSection />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }
