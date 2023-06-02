@@ -6,23 +6,25 @@ import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-300 pb-10 pt-10">
-      <div className="mx-auto max-w-7xl">
-        <div className="flex justify-between">
+    <footer className="bg-orange-300 pt-10">
+      <div className="mx-auto max-w-7xl pb-10">
+        <div className="mx-auto flex flex-col justify-around px-10 lg:flex-row lg:px-0">
           <div className="flex flex-col">
             <Link href="/" className="text-2xl font-bold">
               Thicken Thighs
             </Link>
-            <p className="mb-5 mt-3 text-center text-xl leading-loose text-black/70">
+            <p className="mb-5 mt-3 text-base leading-loose text-black/70 xl:text-xl">
               With super slow services comes super tasty chickens
             </p>
             <SocialLinks />
           </div>
 
-          <div className="flex flex-col">
-            <h5 className="text-xl uppercase">Explore the site</h5>
+          <div className="mt-8 flex flex-col lg:mt-0">
+            <h5 className="w-fit border-b-2 border-orange-600 text-xl uppercase">
+              Explore the site
+            </h5>
 
-            <nav className="flex justify-start border-t-2 border-orange-600 pt-4">
+            <nav className="flex justify-start pt-4">
               <ul className="flex w-full list-none flex-col justify-between">
                 {navLinks.map((link) => (
                   <li key={link.label} className="mb-3 inline-block">
@@ -38,17 +40,18 @@ const Footer = () => {
             </nav>
           </div>
 
-          <div className="flex flex-col">
-            <h5 className="text-xl uppercase">Contact Us</h5>
-            <address
-              className="border-t-2 border-orange-600 pt-2 text-black/70
-            "
-            >
+          <div className="mt-8 flex flex-col lg:mt-0">
+            <h5 className="w-fit border-b-2 border-orange-600 text-xl uppercase">
+              Contact Us
+            </h5>
+            <address className="pt-2 text-black/70">
               <div className="mt-3 flex items-center">
                 <Icon icon={FiMapPin} color="rgb(0 0 0 / 0.7)" />
                 <p className="ml-3">
-                  1234 N Main St, <br />
-                  Mountain View, CA 12345
+                  Somewhere near Lake Tahoe, <br />
+                  <span className="mt-2 inline-block">
+                    Lake Tahoe, CA or NV, 99999
+                  </span>
                 </p>
               </div>
               <div className="mt-3 flex items-center">
