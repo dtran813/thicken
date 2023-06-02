@@ -1,10 +1,9 @@
 import { aboutUs, chickens, slow } from '@/public';
 import Image from 'next/image';
 import Button from './components/Button';
-import Footer from './components/Footer';
 import Menu from './components/FreeMenu/page';
 import Sauces from './components/sauces/page';
-import ContactUs from './contactUs/page';
+import ContactUsSection from './contactUs/ContactUsSection';
 
 export default function Home() {
   return (
@@ -116,11 +115,9 @@ export default function Home() {
 
           <Sauces />
 
-          <ContactUs />
+          <ContactUsSection />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }
