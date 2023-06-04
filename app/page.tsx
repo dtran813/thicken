@@ -1,6 +1,6 @@
-import { aboutUs, chickens, slow } from '@/public';
-import Image from 'next/image';
 import Button from './components/Button';
+import FeaturedSection from './components/FeaturedSection/FeaturedSection';
+import FreeMenu from './components/FreeMenu/FreeMenu';
 import Sauces from './components/sauces/page';
 import ContactUsSection from './contactUs/ContactUsSection';
 
@@ -34,81 +34,7 @@ export default function Home() {
             <div className="hidden flex-1 md:block"></div>
           </section>
 
-          <section id="aboutUs" className="flex items-center">
-            <div className="flex-1">
-              <div className="flex flex-col px-10">
-                <p className="text-lg italic text-black/70">- About Us -</p>
-                <h2 className="mt-9 text-6xl font-semibold">
-                  Welcome to{' '}
-                  <span className="relative mr-1 inline-block transition before:absolute before:-inset-x-1 before:-inset-y-px before:block before:-skew-y-3 before:bg-orange-400 hover:scale-105">
-                    <span className="relative font-semibold">
-                      Thicken Thighs
-                    </span>
-                  </span>
-                  : Where Chickens Are Our Superstars!
-                </h2>
-                <p className="mx-auto my-10 text-lg leading-loose text-black/70">
-                  At Thicken Thighs, we take pride in being the premier
-                  slow-food restaurant in the industry. Our commitment to
-                  slowness and chicken-centric cuisine sets us apart. With the
-                  quality coming from the slowest staff and thickest chickens,
-                  we&apos;re here to serve up a memorable dining experience that
-                  will leave you clucking for more!
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-1">
-              <Image src={aboutUs} alt="Inside a restaurant" />
-            </div>
-          </section>
-
-          <section
-            id="commitment"
-            className="flex flex-row-reverse items-center"
-          >
-            <div className="flex-1">
-              <div className="flex flex-col px-10">
-                <p className="text-lg italic text-black/70">- Commitment -</p>
-                <h2 className="mt-9 text-6xl font-semibold">
-                  Our Commitment to Slowness
-                </h2>
-                <p className="mx-auto my-10 text-lg leading-loose text-black/70">
-                  You won&apos;t find a restaurant slower than us — seriously,
-                  we&apos;ve won awards for it! We take our time with each and
-                  every meal, ensuring that the flavors develop at a
-                  snail&apos;s pace to reach maximum deliciousness.! Join us on
-                  a culinary adventure where every bite is worth the wait.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-1">
-              <Image src={slow} alt="A snail on a long leaf" />
-            </div>
-          </section>
-
-          <section id="profits" className="flex items-center">
-            <div className="flex-1">
-              <div className="flex flex-col px-10">
-                <p className="text-lg italic text-black/70">- Profits -</p>
-                <h2 className="mt-9 text-6xl font-semibold">
-                  Chicken Reproduction Fund
-                </h2>
-                <p className="mx-auto my-10 text-lg leading-loose text-black/70">
-                  At Thicken Thighs, our profits are dedicated to supporting our
-                  backyard chickens. By dining with us, you contribute to their
-                  romantic endeavors. Please be patient, as our feathered
-                  friends need time to do their thing — reproduce. It&apos;s all
-                  part of our commitment to sustainable poultry practices.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-1">
-              <Image src={chickens} alt="Chickens in a garden" />
-            </div>
-          </section>
+          <FeaturedSection />
 
           <FreeMenu />
 
