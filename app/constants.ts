@@ -1,4 +1,12 @@
-import { saliva, special, walnut_honey, weak_sauce } from '@/public';
+import {
+  aboutUs,
+  chickens,
+  saliva,
+  slow,
+  special,
+  walnut_honey,
+  weak_sauce,
+} from '@/public';
 import {
   FiFacebook,
   FiInstagram,
@@ -87,7 +95,43 @@ export const freeMenu = [
   },
   {
     name: 'Chicken Kids',
-    desc: 'We recommend adopting these adorable chicks instead of eating them. They&apos;re for cuddles, not consumption!',
+    desc: `We recommend adopting these adorable chicks instead of eating them. They're for cuddles, not consumption!`,
     imgSrc: chickenKids,
+  },
+];
+
+export const featuredSection = [
+  {
+    id: 'aboutUs',
+    title: 'About Us',
+    heading: 'Welcome to Thicken Thighs: Where Chickens Are Our Superstars!',
+    content: `At Thicken Thighs, we take pride in being the premier
+    slow-food restaurant in the industry. Our commitment to
+    slowness and chicken-centric cuisine sets us apart. With the
+    quality coming from the slowest staff and thickest chickens,
+    we're here to serve up a memorable dining experience that
+    will leave you clucking for more!`,
+    imgSrc: aboutUs,
+    alt: 'Inside a restaurant',
+  },
+  {
+    id: 'commitment',
+    title: 'Commitment',
+    heading: 'Out Commitment to Slowness',
+    content: `You won't find a restaurant slower than us — seriously,
+    we've won awards for it! We take our time with each and
+    every meal, ensuring that the flavors develop at a
+    snail's pace to reach maximum deliciousness.! Join us on
+    a culinary adventure where every bite is worth the wait.`,
+    imgSrc: slow,
+    alt: 'A snail on a long leaf',
+  },
+  {
+    id: 'profits',
+    title: 'Profits',
+    heading: 'Chicken Reproduction Fund',
+    content: `At Thicken Thighs, our profits are dedicated to supporting our backyard chickens. By dining with us, you contribute to their romantic endeavors. Please be patient, as our feathered friends need time to do their thing — reproduce. It's all part of our commitment to sustainable poultry practices.`,
+    imgSrc: chickens,
+    alt: 'Chickens in a garden',
   },
 ];
