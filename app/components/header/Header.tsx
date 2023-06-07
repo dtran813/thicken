@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { navLinks } from '../constants';
-import SocialLinks from './SocialLinks';
+import { FiMenu } from 'react-icons/fi';
+import { navLinks } from '../../constants';
+import SocialLinks from '../SocialLinks';
+import MobileNav from './MobileNav';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,29 +35,15 @@ const Header = () => {
         </div>
 
         <button
-          className="block transition-all duration-500 ease-out lg:hidden"
+          className="absolute right-5 top-6 block lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <div
-            className={`mb-1 h-[3px] w-[30px] bg-white transition duration-500 ease-out ${
-              isMenuOpen
-                ? 'translate-x-[6px] translate-y-[8px] rotate-[225deg]'
-                : ''
-            } `}
-          />
-          <div
-            className={`mb-1 h-[3px] w-[30px] bg-white transition-all duration-500 ease-out ${
-              isMenuOpen ? 'rotate-180 opacity-0' : ''
-            }`}
-          />
-          <div
-            className={`mb-1 h-[3px] w-[30px] bg-white transition duration-500 ease-out ${
-              isMenuOpen
-                ? '-translate-y-[6px] translate-x-[6px] rotate-[135deg]'
-                : ''
-            }`}
-          />
+          <FiMenu size={32} />
         </button>
+
+        {isMenuOpen && (
+          <MobileNav isOpen={isMenuOpen} toggleMenu={setIsMenuOpen} />
+        )}
       </div>
     </header>
   );

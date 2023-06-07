@@ -24,7 +24,7 @@ const FeaturedSectionCard: React.FC<FeaturedSectionProps> = ({
   >
     <div className="flex-1">
       <div className="flex flex-col px-10">
-        <p className="text-lg italic text-black/70">{sectionData.title}</p>
+        <p className="text-lg italic text-black/70">- {sectionData.title} -</p>
         <h2 className="mt-9 text-6xl font-semibold">{sectionData.heading}</h2>
         <p className="mx-auto my-10 text-lg leading-loose text-black/70">
           {sectionData.content}
