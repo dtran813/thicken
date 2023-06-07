@@ -1,6 +1,6 @@
 import Button from './components/Button';
-import FeaturedSection from './components/FeaturedSection/FeaturedSection';
-import FreeMenu from './components/FreeMenu/FreeMenu';
+import FeaturedSection from './components/featuredSection/FeaturedSection';
+import FreeMenu from './components/freeMenu/FreeMenu';
 import Sauces from './components/sauces/page';
 import ContactUsSection from './contactUs/ContactUsSection';
 
