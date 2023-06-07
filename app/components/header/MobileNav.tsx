@@ -15,7 +15,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleMenu }) => {
   return (
     <FocusLock>
       <RemoveScroll>
-        <div className="absolute left-0 top-0 h-screen w-full bg-orange-200/90 transition duration-500">
+        <div className="absolute inset-0 h-screen w-full bg-orange-200/90">
           <nav className="flex h-full flex-col items-center justify-center">
             <ul className="mb-5 flex list-none flex-col">
               {navLinks.map((link, index) => (
