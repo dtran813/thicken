@@ -2,7 +2,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import FocusLock from 'react-focus-lock';
+import { FiMenu, FiXSquare } from 'react-icons/fi';
+import { RemoveScroll } from 'react-remove-scroll';
 import { navLinks } from '../constants';
+import Button from './Button';
 import SocialLinks from './SocialLinks';
 
 const Header = () => {
@@ -33,29 +37,44 @@ const Header = () => {
         </div>
 
         <button
-          className="block transition-all duration-500 ease-out lg:hidden"
+          className="block lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <div
-            className={`mb-1 h-[3px] w-[30px] bg-white transition duration-500 ease-out ${
-              isMenuOpen
-                ? 'translate-x-[6px] translate-y-[8px] rotate-[225deg]'
-                : ''
-            } `}
-          />
-          <div
-            className={`mb-1 h-[3px] w-[30px] bg-white transition-all duration-500 ease-out ${
-              isMenuOpen ? 'rotate-180 opacity-0' : ''
-            }`}
-          />
-          <div
-            className={`mb-1 h-[3px] w-[30px] bg-white transition duration-500 ease-out ${
-              isMenuOpen
-                ? '-translate-y-[6px] translate-x-[6px] rotate-[135deg]'
-                : ''
-            }`}
-          />
+          <FiMenu size={32} />
         </button>
+
+        {isMenuOpen && (
+          <FocusLock>
+            <RemoveScroll>
+              <div className="absolute left-0 top-0 h-screen w-full bg-orange-200/90 transition duration-500">
+                <nav className="flex h-full flex-col items-center justify-center">
+                  <ul className="flex list-none flex-col">
+                    {navLinks.map((link, index) => (
+                      <li key={link.label}>
+                        <Link
+                          href={link.url}
+                          className="inline-block px-3 py-1 font-mono text-3xl font-bold"
+                        >
+                          <span className="mr-4 ">{index + 1}</span>
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    roundedBorder={false}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  >
+                    <p className="flex items-center">
+                      <FiXSquare size={24} className="mr-3" />
+                      <span className="text-xl">Dismiss</span>
+                    </p>
+                  </Button>
+                </nav>
+              </div>
+            </RemoveScroll>
+          </FocusLock>
+        )}
       </div>
     </header>
   );
