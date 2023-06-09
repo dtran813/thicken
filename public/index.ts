@@ -1,4 +1,5 @@
 import aboutUs from './aboutUs.jpg';
+import chicken_products from './chicken_products.png';
 import chickens from './chickens.jpg';
 import slow from './slow.jpg';
 
@@ -13,6 +14,7 @@ import weak_sauce from './sauces/weak_sauce.jpg';
 
 export {
   aboutUs,
+  chicken_products,
   slow,
   chickens,
   egg,
