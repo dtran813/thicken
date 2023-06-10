@@ -20,7 +20,7 @@ const ContactUsClient = () => {
                 alt="Thicken Thighs logo on Contact Us page"
               />
             </div>
-            <p className="text-base text-black/70 sm:leading-loose lg:text-xl">
+            <p className="p-10 text-base text-black/70 sm:leading-loose lg:text-xl">
               Have a question, suggestion, or just want to chat about all things
               chicken? We&apos;re all ears (and wings)! Drop us a line using our
               handy-dandy contact form below or reach out to us via carrier
