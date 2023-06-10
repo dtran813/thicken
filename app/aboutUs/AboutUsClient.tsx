@@ -1,6 +1,6 @@
 import { aboutUsLogo, line } from '@/public';
 import Image from 'next/image';
-import FeaturedSection from '../components/featuredSection/FeaturedSection';
+import FeaturedSection from '../components/FeaturedSection/FeaturedSection';
 
 const AboutUsClient = () => {
   return (
