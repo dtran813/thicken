@@ -1,14 +1,14 @@
 import {
-  aboutUs,
   chickenHeart,
   chickenKids,
   chickens,
   egg,
+  restaurant,
   saliva,
   slow,
   special,
-  walnut_honey,
-  weak_sauce,
+  walnutHoney,
+  weakSauce,
 } from '@/public';
 
 import {
@@ -72,7 +72,7 @@ export const featuredSection = [
     quality coming from the slowest staff and thickest chickens,
     we're here to serve up a memorable dining experience that
     will leave you clucking for more!`,
-    imgSrc: aboutUs,
+    imgSrc: restaurant,
     alt: 'Inside a restaurant',
   },
   {
@@ -101,12 +101,12 @@ export const saucesInfo = [
   {
     name: 'Walnut Honey Skunk',
     desc: 'A unique combination of walnut essence and the mysterious aroma of a skunk.',
-    imgSrc: walnut_honey,
+    imgSrc: walnutHoney,
   },
   {
     name: 'Not Really A Special Sauce (Weak Sauce)',
     desc: 'A sauce that challenges the boundaries of mediocrity. Prepare for a taste adventure!',
-    imgSrc: weak_sauce,
+    imgSrc: weakSauce,
   },
   {
     name: 'House Special Saliva',

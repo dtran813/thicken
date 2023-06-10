@@ -1,27 +1,37 @@
-import aboutUs from './aboutUs.jpg';
-import chicken_products from './chicken_products.png';
+import chickenProducts from './chickenProducts.png';
 import chickens from './chickens.jpg';
+import restaurant from './restaurant.jpg';
 import slow from './slow.jpg';
 
-import chickenHeart from './free-menu/chicken-heart.jpg';
-import chickenKids from './free-menu/chicken-kids.jpg';
-import egg from './free-menu/egg.jpg';
+import chickenHeart from './freeMenu/chickenHeart.jpg';
+import chickenKids from './freeMenu/chickenKids.jpg';
+import egg from './freeMenu/egg.jpg';
 
 import saliva from './sauces/saliva.jpg';
 import special from './sauces/special.jpg';
-import walnut_honey from './sauces/walnut_honey.jpg';
-import weak_sauce from './sauces/weak_sauce.jpg';
+import walnutHoney from './sauces/walnutHoney.jpg';
+import weakSauce from './sauces/weakSauce.jpg';
+
+import aboutUsLogo from './aboutUsLogo.png';
+import contactUsLogo from './contactUsLogo.png';
+import logo from './logo.png';
+
+import line from './line.svg';
 
 export {
-  aboutUs,
-  chicken_products,
+  restaurant,
+  chickenProducts,
   slow,
   chickens,
   egg,
   chickenHeart,
   chickenKids,
-  walnut_honey,
-  weak_sauce,
+  walnutHoney,
+  weakSauce,
   saliva,
   special,
+  logo,
+  aboutUsLogo,
+  contactUsLogo,
+  line,
 };
