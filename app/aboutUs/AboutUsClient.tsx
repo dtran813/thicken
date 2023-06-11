@@ -5,7 +5,7 @@ import FeaturedSection from '../components/FeaturedSection/FeaturedSection';
 const AboutUsClient = () => {
   return (
     <div className="relative bg-orange-200">
-      <div className="mx-auto max-w-7xl pb-10">
+      <div className="mx-auto max-w-screen-xl pb-10">
         <div className="flex flex-col items-center md:flex-row">
           <div className="flex-1">
             <Image src={aboutUs} alt="Our story" />

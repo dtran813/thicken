@@ -7,7 +7,7 @@ import ContactUsSection from './ContactUsSection';
 const ContactUsClient = () => {
   return (
     <div className="bg-orange-200 pb-20 pt-10">
-      <div className="mx-auto max-w-7xl pb-10">
+      <div className="mx-auto max-w-screen-xl pb-10">
         <div className="flex flex-col items-center border-b-2 border-orange-600 px-5 pb-10 md:flex-row">
           <div className="flex flex-1 justify-center">
             <Image src={contactUs} alt="Contact Us image" />
