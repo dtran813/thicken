@@ -2,6 +2,7 @@ import Button from './Button';
 
 const Hero = () => {
   return (
+    /* height = 100vh - header height */
     <section id="hero" className="relative flex h-[calc(100vh-5rem)] p-10">
       <div className="m-auto flex max-w-xl flex-col xl:max-w-3xl">
         <p className="mb-10 text-3xl font-bold text-white sm:text-5xl md:text-6xl xl:text-7xl">
