@@ -35,10 +35,12 @@ export default function Home() {
                   <p className="mt-4 text-lg text-black/70">
                     We&apos;ve never asked why you eat so slow, so stop asking
                     us why are we so slow. Don&apos;t you see the award we win
-                    every year? We ranked #1 in the market for being the slowest
-                    food service for more than 50 years for no reason. So stop
-                    asking us that stupid question, just sit back, relax, take a
-                    nap, and enjoy the food.
+                    every year? We ranked{' '}
+                    <span className="text-xl font-bold">#1 </span>
+                    in the market for being the slowest food service for more
+                    than 50 years for no reason. So stop asking us that stupid
+                    question, just sit back, relax, take a nap, and enjoy the
+                    food.
                   </p>
 
                   <Link
