@@ -10,7 +10,7 @@ import MobileNav from './MobileNav';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="sticky left-0 top-0 z-10">
+    <header className="sticky left-0 top-0 z-50">
       <div className="flex h-20 items-center justify-between bg-orange-200/75 p-5">
         <div className="flex justify-start xl:basis-1/3">
           <h1 className="text-2xl font-bold">

@@ -16,6 +16,9 @@ import aboutUsLogo from './aboutUsLogo.png';
 import contactUsLogo from './contactUsLogo.png';
 import logo from './logo.png';
 
+import aboutUs from './aboutUs.png';
+import contactUs from './contactUs.png';
+import intro from './intro.jpg';
 import line from './line.svg';
 
 export {
@@ -34,4 +37,7 @@ export {
   aboutUsLogo,
   contactUsLogo,
   line,
+  contactUs,
+  aboutUs,
+  intro,
 };

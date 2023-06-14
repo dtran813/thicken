@@ -4,7 +4,7 @@ import Image from 'next/image';
 const MenuClient = () => {
   return (
     <div className="relative bg-orange-200">
-      <div className="mx-auto max-w-7xl pb-10">
+      <div className="mx-auto max-w-screen-xl pb-10">
         <div className="grid grid-cols-1 place-items-center px-5 pb-10">
           <div className="col-span-full row-span-full">
             <Image src={chickenProducts} alt="Products from chickens" />

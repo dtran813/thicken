@@ -7,7 +7,7 @@ import SocialLinks from './SocialLinks';
 const Footer = () => {
   return (
     <footer className="bg-orange-300 pt-10">
-      <div className="mx-auto max-w-7xl pb-10">
+      <div className="mx-auto max-w-screen-xl pb-10">
         <div className="mx-auto flex flex-col justify-around px-10 lg:flex-row lg:px-0">
           <div className="flex flex-col">
             <Link href="/" className="text-2xl font-bold">
