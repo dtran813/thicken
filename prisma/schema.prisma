@@ -16,4 +16,5 @@ model Menu {
   price Float
   calories String
   description String
+  imgUrl String
 } 
