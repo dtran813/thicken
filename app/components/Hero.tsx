@@ -18,7 +18,7 @@ const Hero = () => {
           will have you questioning the meaning of haste in the most
           outrageously delicious way possible.
         </p>
-        <Button>Make A Reservation</Button>
+        <Button roundedBorder>Make A Reservation</Button>
       </div>
       <div className="hidden flex-1 md:block"></div>
     </section>

@@ -1,6 +1,7 @@
 import { intro } from '@/public';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from './components/Button';
 import FreeMenu from './components/FreeMenu/FreeMenu';
 import Hero from './components/Hero';
 import Sauces from './components/sauces/page';
@@ -32,7 +33,7 @@ export default function Home() {
                 <div className="p-8 sm:p-16 lg:p-6 xl:p-20">
                   <h2 className="mb-3 text-6xl font-semibold">Why So Slow?</h2>
 
-                  <p className="mt-4 text-lg text-black/70">
+                  <p className="mb-4 mt-4 text-lg text-black/70">
                     We&apos;ve never asked why you eat so slow, so stop asking
                     us why are we so slow. Don&apos;t you see the award we win
                     every year? We ranked{' '}
@@ -42,13 +43,9 @@ export default function Home() {
                     question, just sit back, relax, take a nap, and enjoy the
                     food.
                   </p>
-
-                  <Link
-                    href="/aboutUs"
-                    className="mt-8 inline-block rounded border border-orange-400 bg-orange-400 px-12 py-3 text-lg font-medium text-white hover:bg-transparent hover:text-orange-400 focus:outline-none focus:ring active:text-orange-300"
-                  >
-                    More Info
-                  </Link>
+                  <Button>
+                    <Link href="/aboutUs">More Info</Link>
+                  </Button>
                 </div>
               </div>
             </div>

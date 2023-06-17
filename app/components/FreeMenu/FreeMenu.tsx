@@ -34,7 +34,7 @@ const FreeMenu = () => {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <Button>Explore Money Out Of The Bank Menu</Button>
+        <Button roundedBorder>Explore Money Out Of The Bank Menu</Button>
       </div>
     </section>
   );
