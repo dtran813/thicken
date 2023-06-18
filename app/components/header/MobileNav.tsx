@@ -35,7 +35,11 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleMenu }) => {
               <SocialLinks />
             </div>
 
-            <Button roundedBorder={false} onClick={() => toggleMenu(!isOpen)}>
+            <Button
+              roundedBorder={false}
+              className="mt-4 bg-red-600 px-7 py-3 text-lg font-medium text-white/90"
+              onClick={() => toggleMenu(!isOpen)}
+            >
               <p className="flex items-center">
                 <FiXSquare size={24} className="mr-3" />
                 <span className="text-xl">Dismiss</span>

@@ -43,7 +43,7 @@ export default function Home() {
                     question, just sit back, relax, take a nap, and enjoy the
                     food.
                   </p>
-                  <Button>
+                  <Button className="mt-4 bg-orange-400 px-8 py-4 text-lg font-medium text-white/90">
                     <Link href="/aboutUs">More Info</Link>
                   </Button>
                 </div>

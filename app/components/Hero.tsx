@@ -18,7 +18,12 @@ const Hero = () => {
           will have you questioning the meaning of haste in the most
           outrageously delicious way possible.
         </p>
-        <Button roundedBorder>Make A Reservation</Button>
+        <Button
+          roundedBorder
+          className="mt-4 bg-orange-400 px-8 py-4 text-lg font-medium text-white/90"
+        >
+          Make A Reservation
+        </Button>
       </div>
       <div className="hidden flex-1 md:block"></div>
     </section>

@@ -11,7 +11,9 @@ const ContactUsForm = () => {
 
         <Input id="message" label="Message" required isTextarea />
 
-        <Button>Submit</Button>
+        <Button className="mt-4 bg-orange-400 px-8 py-4 text-lg font-medium text-white/90">
+          Submit
+        </Button>
       </form>
     </div>
   );

@@ -34,7 +34,12 @@ const FreeMenu = () => {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <Button roundedBorder>Explore Money Out Of The Bank Menu</Button>
+        <Button
+          roundedBorder
+          className="bg-orange-400 px-8 py-4 text-lg font-medium text-white/90"
+        >
+          Explore Money Out Of The Bank Menu
+        </Button>
       </div>
     </section>
   );
