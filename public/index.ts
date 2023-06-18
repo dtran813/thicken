@@ -18,8 +18,8 @@ import logo from './logo.png';
 
 import aboutUs from './aboutUs.png';
 import contactUs from './contactUs.png';
+import grilled_chicken from './grilled_chicken.jpg';
 import intro from './intro.jpg';
-import line from './line.svg';
 
 export {
   restaurant,
@@ -36,8 +36,8 @@ export {
   logo,
   aboutUsLogo,
   contactUsLogo,
-  line,
   contactUs,
   aboutUs,
   intro,
+  grilled_chicken,
 };
