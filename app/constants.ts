@@ -137,3 +137,5 @@ export const freeMenu = [
     imgSrc: chickenKids,
   },
 ];
+
+export const categories = ['Appetizer', 'Main', 'Dessert'];
