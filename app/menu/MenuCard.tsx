@@ -1,8 +1,5 @@
-'use client';
-
 import { Menu } from '@prisma/client';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import Button from '../components/Button';
 
 interface MenuCardProps {
@@ -10,19 +7,14 @@ interface MenuCardProps {
 }
 
 const MenuCard: React.FC<MenuCardProps> = ({ menu }) => {
-  const router = useRouter();
-
   return (
-    <div
-      className="group relative h-96 w-80 cursor-pointer overflow-hidden rounded-xl bg-orange-300/50"
-      onClick={() => router.push(`/menu/${menu.id}`)}
-    >
+    <div className="relative h-96 w-72 cursor-pointer overflow-hidden rounded-xl bg-orange-300/50">
       <div className="relative h-52 w-full ">
         <Image
           fill
           src={menu.imgUrl}
           alt={menu.name}
-          className="h-full w-full object-cover transition group-hover:scale-105"
+          className="h-full w-full object-cover transition hover:scale-105"
         />
       </div>
       <div className="mt-2 flex flex-col p-4">

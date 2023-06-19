@@ -45,18 +45,25 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
         </div>
 
         <div className="flex flex-col gap-5 p-3 xl:flex-row">
-          <div className="flex flex-col overflow-auto bg-orange-400 uppercase xl:basis-64">
-            <h2 className="hidden p-5 text-xl font-extrabold xl:block">Menu</h2>
-            <nav className=" border-black p-6 xl:border-t-2 xl:p-5 xl:pt-2">
-              <ul className="flex flex-row text-xl font-bold tracking-wide xl:flex-col xl:text-base">
-                {categories.map((category) => (
-                  <li key={category} className="mr-10 xl:my-2">
+          <div className="flex flex-col bg-orange-400 uppercase xl:w-96">
+            <h2 className="hidden p-4 text-xl font-extrabold xl:block">Menu</h2>
+            <nav className="overflow-x-auto border-black p-6 xl:border-t-2 xl:p-0 xl:pl-4 xl:pt-2">
+              <ul className="flex flex-row text-xl font-bold xl:flex-col xl:text-base">
+                {categories.map((category, index) => (
+                  <li
+                    key={category}
+                    className={`whitespace-nowrap xl:my-2 xl:pr-0 ${
+                      index === categories.length - 1 ? 'pr-5' : 'pr-10'
+                    }`}
+                  >
                     <a
                       href={`#${category}`}
                       className="border-red-600 hover:text-red-600 focus:border-b-2 focus:text-red-600"
                       onClick={() => {
                         const newMenu = menu.filter(
-                          (item) => item.category === category.toLowerCase()
+                          (item) =>
+                            item.category.toLowerCase() ===
+                            category.toLowerCase()
                         );
 
                         setCurrentMenu(newMenu);
@@ -69,7 +76,7 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
               </ul>
             </nav>
           </div>
-          <div className="flex basis-full flex-wrap justify-center gap-x-5 gap-y-10">
+          <div className="flex w-full flex-wrap justify-center gap-10">
             {currentMenu.map((item) => (
               <MenuCard key={item.name} menu={item} />
             ))}

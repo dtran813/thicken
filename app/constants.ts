@@ -138,4 +138,12 @@ export const freeMenu = [
   },
 ];
 
-export const categories = ['Appetizer', 'Main', 'Dessert'];
+export const categories = [
+  'Prelude Pleasures',
+  'Eggsquisite Beginnings',
+  'Clucktastic Fantasies',
+  'Chick-a-licious Sandwiches',
+  "Little Peeps' Corner",
+  'Sweet Endings',
+  'Refreshing Potions',
+];
