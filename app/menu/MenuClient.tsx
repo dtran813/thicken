@@ -1,23 +1,79 @@
-import { chickenProducts } from '@/public';
-import Image from 'next/image';
+'use client';
 
-const MenuClient = () => {
+import { grilled_chicken } from '@/public';
+import { Menu } from '@prisma/client';
+import Image from 'next/image';
+import { useState } from 'react';
+import Button from '../components/Button';
+import { categories } from '../constants';
+import MenuCard from './MenuCard';
+
+interface MenuClientProps {
+  menu: Menu[];
+}
+
+const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
+  const [currentMenu, setCurrentMenu] = useState(menu);
+
   return (
     <div className="relative bg-orange-200">
       <div className="mx-auto max-w-screen-xl pb-10">
-        <div className="grid grid-cols-1 place-items-center px-5 pb-10">
-          <div className="col-span-full row-span-full">
-            <Image src={chickenProducts} alt="Products from chickens" />
+        <h1 className="visually-hidden">Menu</h1>
+        <div className="flex items-center gap-5 py-5">
+          <div className="flex flex-1 flex-col p-5">
+            <p className="mb-3 text-base font-medium lg:mb-6 lg:text-xl">
+              Most Popular
+            </p>
+            <p className="text-special mb-3 text-2xl font-bold lg:text-4xl">
+              Grilled Chicken
+            </p>
+            <p className="mb-6 text-sm text-black/70 lg:text-lg">
+              Big fat chicken thighs grill with our special sauce and serve with
+              roasted corn. Tender, juicy, and packed with flavor.
+            </p>
+            <Button className="mt-4 bg-orange-400 px-6 py-3 text-lg font-medium text-white/90">
+              Order Now
+            </Button>
           </div>
-          <h1 className="col-span-full row-span-full mb-8 flex-1 text-center text-5xl font-black italic tracking-tight text-white md:mb-0 lg:text-8xl">
-            <span className="block opacity-100">Menu</span>
-            <span className="block -translate-y-8 translate-x-10 opacity-80">
-              Menu
-            </span>
-            <span className="block -translate-y-16 translate-x-20 opacity-60">
-              Menu
-            </span>
-          </h1>
+          <div className="flex-1 p-5">
+            <Image
+              src={grilled_chicken}
+              alt="Grilled Chicken"
+              className="rounded-lg transition-transform hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 p-3 xl:flex-row">
+          <div className="flex flex-col overflow-auto bg-orange-400 uppercase xl:basis-64">
+            <h2 className="hidden p-5 text-xl font-extrabold xl:block">Menu</h2>
+            <nav className=" border-black p-6 xl:border-t-2 xl:p-5 xl:pt-2">
+              <ul className="flex flex-row text-xl font-bold tracking-wide xl:flex-col xl:text-base">
+                {categories.map((category) => (
+                  <li key={category} className="mr-10 xl:my-2">
+                    <a
+                      href={`#${category}`}
+                      className="border-red-600 hover:text-red-600 focus:border-b-2 focus:text-red-600"
+                      onClick={() => {
+                        const newMenu = menu.filter(
+                          (item) => item.category === category.toLowerCase()
+                        );
+
+                        setCurrentMenu(newMenu);
+                      }}
+                    >
+                      {category}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+          <div className="flex basis-full flex-wrap justify-center gap-x-5 gap-y-10">
+            {currentMenu.map((item) => (
+              <MenuCard key={item.name} menu={item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
