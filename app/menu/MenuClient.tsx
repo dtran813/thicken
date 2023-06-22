@@ -5,6 +5,8 @@ import { Menu } from '@prisma/client';
 import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Button';
+import OrderModal from '../components/OrderModal';
+import useOrderModal from '../components/hooks/useOrderModal';
 import { categories } from '../constants';
 import MenuCard from './MenuCard';
 
@@ -13,10 +15,13 @@ interface MenuClientProps {
 }
 
 const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
-  const [currentMenu, setCurrentMenu] = useState(menu);
+  const orderModal = useOrderModal();
+  const [currentMenuCategory, setCurrentMenuCategory] = useState(menu);
+  const [selectedItem, setSelectedItem] = useState(menu[0]);
 
   return (
     <div className="relative bg-orange-200">
+      <OrderModal isOpen={orderModal.isOpen} menu={selectedItem} />
       <div className="mx-auto max-w-screen-xl pb-10">
         <h1 className="visually-hidden">Menu</h1>
         <div className="flex items-center gap-5 py-5">
@@ -31,7 +36,10 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
               Big fat chicken thighs grill with our special sauce and serve with
               roasted corn. Tender, juicy, and packed with flavor.
             </p>
-            <Button className="mt-4 bg-orange-400 px-6 py-3 text-lg font-medium text-white/90">
+            <Button
+              className="mt-4 bg-orange-400 px-6 py-3 text-lg font-medium text-white/90"
+              onClick={orderModal.onOpen}
+            >
               Order Now
             </Button>
           </div>
@@ -66,7 +74,7 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
                             category.toLowerCase()
                         );
 
-                        setCurrentMenu(newMenu);
+                        setCurrentMenuCategory(newMenu);
                       }}
                     >
                       {category}
@@ -77,8 +85,12 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
             </nav>
           </div>
           <div className="flex w-full flex-wrap justify-center gap-10">
-            {currentMenu.map((item) => (
-              <MenuCard key={item.name} menu={item} />
+            {currentMenuCategory.map((item) => (
+              <MenuCard
+                key={item.name}
+                menu={item}
+                setMenu={() => setSelectedItem(item)}
+              />
             ))}
           </div>
         </div>
