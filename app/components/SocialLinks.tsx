@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { socialLinks } from '../constants';
+import { socialLinks } from '../utils/constants';
 import Icon from './Icon';
 
 const SocialLinks = () => {

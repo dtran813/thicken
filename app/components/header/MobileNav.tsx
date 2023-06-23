@@ -1,4 +1,4 @@
-import { navLinks } from '@/app/constants';
+import { navLinks } from '@/app/utils/constants';
 import Link from 'next/link';
 import FocusLock from 'react-focus-lock';
 import { FiXSquare } from 'react-icons/fi';

@@ -1,9 +1,9 @@
 'use client';
 
+import { navLinks } from '@/app/utils/constants';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
-import { navLinks } from '../../constants';
 import SocialLinks from '../SocialLinks';
 import MobileNav from './MobileNav';
 

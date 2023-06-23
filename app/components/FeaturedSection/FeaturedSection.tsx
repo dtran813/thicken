@@ -1,4 +1,4 @@
-import { featuredSection } from '@/app/constants';
+import { featuredSection } from '@/app/utils/constants';
 import FeaturedSectionCard from './FeaturedSectionCard';
 
 const FeaturedSection = () => {

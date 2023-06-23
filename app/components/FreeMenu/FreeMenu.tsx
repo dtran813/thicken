@@ -1,4 +1,4 @@
-import { freeMenu } from '@/app/constants';
+import { freeMenu } from '@/app/utils/constants';
 import { CiWarning } from 'react-icons/ci';
 import Button from '../Button';
 import FreeMenuCard from './FreeMenuCard';

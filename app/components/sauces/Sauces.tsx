@@ -1,4 +1,4 @@
-import { saucesInfo } from '@/app/constants';
+import { saucesInfo } from '@/app/utils/constants';
 import SauceInfo from './SauceInfo';
 
 const Sauces = () => {

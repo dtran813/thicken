@@ -2,9 +2,9 @@ import { intro } from '@/public';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './components/Button';
-import FreeMenu from './components/FreeMenu/FreeMenu';
 import Hero from './components/Hero';
-import Sauces from './components/sauces/page';
+import FreeMenu from './components/freeMenu/FreeMenu';
+import Sauces from './components/sauces/Sauces';
 import ContactUsSection from './contactUs/ContactUsSection';
 
 export default function Home() {

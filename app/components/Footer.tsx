@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
-import { navLinks } from '../constants';
+import { navLinks } from '../utils/constants';
 import Icon from './Icon';
 import SocialLinks from './SocialLinks';
 
