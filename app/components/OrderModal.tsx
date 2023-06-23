@@ -6,8 +6,8 @@ import { useCallback, useEffect, useState } from 'react';
 import ReactFocusLock from 'react-focus-lock';
 import { FiX } from 'react-icons/fi';
 import { RemoveScroll } from 'react-remove-scroll';
+import useOrderModal from '../hooks/useOrderModal';
 import Button from './Button';
-import useOrderModal from './hooks/useOrderModal';
 import Counter from './inputs/Counter';
 
 interface OrderModalProps {
