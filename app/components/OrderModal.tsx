@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from 'react';
 import ReactFocusLock from 'react-focus-lock';
 import { FiX } from 'react-icons/fi';
 import { RemoveScroll } from 'react-remove-scroll';
+import useCart from '../hooks/useCart';
 import useOrderModal from '../hooks/useOrderModal';
 import Button from './Button';
 import Counter from './inputs/Counter';
@@ -17,6 +18,7 @@ interface OrderModalProps {
 
 const OrderModal: React.FC<OrderModalProps> = ({ isOpen = false, menu }) => {
   const orderModal = useOrderModal();
+  const { addToCart } = useCart();
   const [showModal, setShowModal] = useState(isOpen);
   const [quantity, setQuantity] = useState(1);
 
@@ -101,7 +103,9 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen = false, menu }) => {
 
                     <Button
                       className="absolute bottom-6 right-6 bg-orange-400 px-3 py-2 text-lg text-white/80"
-                      onClick={orderModal.onOpen}
+                      onClick={() => {
+                        addToCart({ menu, quantity });
+                      }}
                     >
                       Order Now
                     </Button>
