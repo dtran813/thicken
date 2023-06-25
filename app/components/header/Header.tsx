@@ -44,24 +44,26 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="relative hidden justify-end lg:flex xl:basis-1/3">
-          <button
-            className="flex items-center space-x-1 rounded-md text-gray-200"
-            onClick={toggleCart}
-          >
-            <FiShoppingCart size={32} color="black" />
-          </button>
-          <span className="absolute -right-2 -top-2 animate-bounce rounded-full bg-amber-400 px-1.5 py-0.5 text-xs font-semibold">
-            {calculateQuantity(cart)}
-          </span>
-        </div>
+        <div className="flex flex-row justify-end gap-5 xl:basis-1/3">
+          <div className="relative">
+            <button
+              className="flex items-center space-x-1 rounded-md text-gray-200"
+              onClick={toggleCart}
+            >
+              <FiShoppingCart size={32} color="black" />
+            </button>
+            <span className="absolute -right-2 -top-2 animate-bounce rounded-full bg-amber-400 px-1.5 py-0.5 text-xs font-semibold">
+              {calculateQuantity(cart)}
+            </span>
+          </div>
 
-        <button
-          className="absolute right-5 top-6 block lg:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <FiMenu size={32} />
-        </button>
+          <button
+            className="block lg:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <FiMenu size={32} />
+          </button>
+        </div>
 
         {isMenuOpen && (
           <MobileNav isOpen={isMenuOpen} toggleMenu={setIsMenuOpen} />

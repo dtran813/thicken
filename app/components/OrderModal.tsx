@@ -64,7 +64,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen = false, menu }) => {
               className={`w-full transform duration-300 ${
                 showModal
                   ? 'translate-y-0 opacity-100'
-                  : 'translate-y-full opacity-0'
+                  : '-translate-y-full opacity-0'
               }`}
             >
               <div className="flex transform flex-col rounded-lg border-0 bg-white shadow-lg md:h-auto">
