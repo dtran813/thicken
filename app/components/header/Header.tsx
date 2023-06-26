@@ -7,7 +7,7 @@ import { Order } from '@/app/utils/types';
 import { calculateQuantity, calculateTotal } from '@/app/utils/utils';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { FiMenu, FiShoppingCart, FiX } from 'react-icons/fi';
+import { FiMenu, FiShoppingCart, FiUser, FiX } from 'react-icons/fi';
 import { CartItem } from '../CartItem';
 import MobileNav from './MobileNav';
 
@@ -27,7 +27,7 @@ const Header = () => {
     <header className="sticky left-0 top-0 z-50">
       <div className="flex h-20 items-center justify-between bg-orange-200/75 p-5">
         <div className="flex justify-start xl:basis-1/3">
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-xl font-bold">
             <Link href="/">Thicken Thighs</Link>
           </h1>
         </div>
@@ -44,7 +44,10 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="flex flex-row justify-end gap-5 xl:basis-1/3">
+        <div className="flex flex-row justify-end gap-3 xl:basis-1/3">
+          <Link href="/account/login">
+            <FiUser size={32} />
+          </Link>
           <div className="relative">
             <button
               className="flex items-center space-x-1 rounded-md text-gray-200"
