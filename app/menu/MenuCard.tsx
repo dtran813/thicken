@@ -1,7 +1,7 @@
 import { Menu } from '@prisma/client';
 import Image from 'next/image';
 import Button from '../components/Button';
-import useOrderModal from '../components/hooks/useOrderModal';
+import useOrderModal from '../hooks/useOrderModal';
 
 interface MenuCardProps {
   menu: Menu;

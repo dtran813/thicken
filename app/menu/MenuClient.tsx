@@ -6,8 +6,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Button';
 import OrderModal from '../components/OrderModal';
-import useOrderModal from '../components/hooks/useOrderModal';
-import { categories } from '../constants';
+import useOrderModal from '../hooks/useOrderModal';
+import { categories } from '../utils/constants';
 import MenuCard from './MenuCard';
 
 interface MenuClientProps {
