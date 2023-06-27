@@ -22,9 +22,6 @@ const SignUp = () => {
               required
             />
 
-            <Input id="phone" label="Mobile Phone" type="tel" required />
-            <Input id="lastName" label="Last Name" required />
-
             <div>
               <Input id="password" label="Password" type="password" required />
               <p className="text-sm">
@@ -48,7 +45,7 @@ const SignUp = () => {
           <hr className="border-gray-500" />
           <Button className="relative mt-4 w-full border-2 border-black bg-white px-8 py-4 text-lg font-medium text-black">
             <FcGoogle size={24} className="absolute left-4" />
-            Continue with Google
+            Sign up with Google
           </Button>
           <Button className="relative mt-4 w-full border-2 border-black bg-white px-8 py-4 text-lg font-medium text-black">
             <IoLogoFacebook
@@ -56,7 +53,7 @@ const SignUp = () => {
               color="#1b74e4"
               className="absolute left-4"
             />
-            Continue with Facebook
+            Sign up with Facebook
           </Button>
 
           <div className="mt-4 text-center font-semibold ">
