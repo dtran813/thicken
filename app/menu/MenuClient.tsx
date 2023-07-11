@@ -5,10 +5,10 @@ import { Menu } from '@prisma/client';
 import Image from 'next/image';
 import { useState } from 'react';
 import Button from '../components/Button';
-import OrderModal from '../components/OrderModal';
 import useOrderModal from '../hooks/useOrderModal';
 import { categories } from '../utils/constants';
 import MenuCard from './MenuCard';
+import OrderModal from './OrderModal';
 
 interface MenuClientProps {
   menu: Menu[];
