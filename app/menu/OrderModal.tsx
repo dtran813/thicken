@@ -4,6 +4,7 @@ import { Menu } from '@prisma/client';
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
 import ReactFocusLock from 'react-focus-lock';
+import { toast } from 'react-hot-toast';
 import { FiX } from 'react-icons/fi';
 import { RemoveScroll } from 'react-remove-scroll';
 import Button from '../components/Button';
@@ -111,6 +112,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen = false, menu }) => {
                       className="absolute bottom-3 right-3 bg-orange-400 px-3 py-2 text-lg text-white/80 sm:bottom-6 sm:right-6"
                       onClick={() => {
                         addToCart({ menu, quantity });
+                        toast.success('Added!');
                       }}
                     >
                       Add To Cart
