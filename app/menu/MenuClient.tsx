@@ -24,8 +24,8 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
       <OrderModal isOpen={orderModal.isOpen} menu={selectedItem} />
       <div className="mx-auto max-w-screen-xl pb-10">
         <h1 className="visually-hidden">Menu</h1>
-        <div className="flex items-center gap-5 py-5">
-          <div className="flex flex-1 flex-col p-5">
+        <div className="flex flex-col-reverse items-center py-5 sm:flex-row sm:gap-5">
+          <div className="flex flex-1 flex-col p-3 sm:p-5">
             <p className="mb-3 text-base font-medium lg:mb-6 lg:text-xl">
               Most Popular
             </p>
@@ -43,7 +43,7 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
               Order Now
             </Button>
           </div>
-          <div className="flex-1 p-5">
+          <div className="flex-1 p-3 sm:p-5">
             <Image
               src={grilled_chicken}
               alt="Grilled Chicken"
@@ -56,7 +56,7 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
           <div className="flex flex-col bg-orange-400 uppercase xl:w-96">
             <h2 className="hidden p-4 text-xl font-extrabold xl:block">Menu</h2>
             <nav className="overflow-x-auto border-black p-6 xl:border-t-2 xl:p-0 xl:pl-4 xl:pt-2">
-              <ul className="flex flex-row text-xl font-bold xl:flex-col xl:text-base">
+              <ul className="flex flex-row text-lg font-bold xl:flex-col xl:text-base">
                 {categories.map((category, index) => (
                   <li
                     key={category}
