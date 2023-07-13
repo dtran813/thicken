@@ -74,7 +74,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed right-0 top-0 h-full w-full max-w-screen-sm overflow-auto bg-orange-100 p-5 ${
+        className={`fixed right-0 top-0 h-screen w-full max-w-screen-sm overflow-auto overflow-y-hidden bg-orange-100 p-5 ${
           showCart ? 'block' : 'hidden'
         }`}
       >
@@ -99,8 +99,8 @@ const Header = () => {
             </div>
           </>
         ) : (
-          <div className="flex items-center justify-center">
-            <p className="text-lg">Your Cart Is Empty</p>
+          <div className="flex h-full items-center justify-center overflow-hidden">
+            <p className="text-xl font-bold">Your Cart Is Empty</p>
           </div>
         )}
       </div>
