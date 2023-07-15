@@ -17,8 +17,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mCart, setMCart] = useState<Order[]>([]);
 
-  console.log({ showCart });
-
   useEffect(() => {
     setMCart(cart);
   }, [cart]);
