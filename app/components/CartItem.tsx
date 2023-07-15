@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { toast } from 'react-hot-toast';
 import { FiMinus, FiPlus, FiTrash2 } from 'react-icons/fi';
 import useCart from '../hooks/useCart';
 import { Order } from '../utils/types';
@@ -11,7 +12,10 @@ export const CartItem = ({ menu, quantity }: Order) => {
       <button
         type="button"
         className="absolute right-2 top-2"
-        onClick={() => removeFromCart(menu.id)}
+        onClick={() => {
+          removeFromCart(menu.id);
+          toast.success('Removed!');
+        }}
       >
         <FiTrash2 size={24} />
       </button>
