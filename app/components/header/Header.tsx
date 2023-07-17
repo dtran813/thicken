@@ -1,6 +1,7 @@
 'use client';
 
 import useCart from '@/app/hooks/useCart';
+import useEscapeKey from '@/app/hooks/useEscapeKey';
 import useStore from '@/app/hooks/useStore';
 import { navLinks } from '@/app/utils/constants';
 import { Order } from '@/app/utils/types';
@@ -16,6 +17,16 @@ const Header = () => {
   const { showCart, toggleCart } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mCart, setMCart] = useState<Order[]>([]);
+
+  const handleCloseCart = () => {
+    if (!showCart) {
+      return;
+    }
+
+    toggleCart();
+  };
+
+  useEscapeKey(handleCloseCart);
 
   useEffect(() => {
     setMCart(cart);
@@ -72,8 +83,8 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed right-0 top-0 h-screen w-full max-w-screen-sm overflow-auto overflow-y-hidden bg-orange-100 p-5 ${
-          showCart ? 'block' : 'hidden'
+        className={`fixed right-0 top-0 h-screen w-full max-w-screen-sm overflow-auto overflow-y-hidden bg-orange-100 p-5 transition-transform duration-500 ${
+          showCart ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex items-center justify-between">

@@ -1,3 +1,4 @@
+import useEscapeKey from '@/app/hooks/useEscapeKey';
 import { navLinks } from '@/app/utils/constants';
 import Link from 'next/link';
 import FocusLock from 'react-focus-lock';
@@ -12,6 +13,12 @@ interface MobileNavProps {
 }
 
 const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleMenu }) => {
+  const handleClose = () => {
+    toggleMenu(!isOpen);
+  };
+
+  useEscapeKey(handleClose);
+
   return (
     <FocusLock>
       <RemoveScroll>
@@ -38,7 +45,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, toggleMenu }) => {
             <Button
               roundedBorder={false}
               className="mt-4 bg-red-600 px-7 py-3 text-lg font-medium text-white/90"
-              onClick={() => toggleMenu(!isOpen)}
+              onClick={handleClose}
             >
               <p className="flex items-center">
                 <FiXSquare size={24} className="mr-3" />
