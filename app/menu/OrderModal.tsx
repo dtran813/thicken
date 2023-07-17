@@ -10,6 +10,7 @@ import { RemoveScroll } from 'react-remove-scroll';
 import Button from '../components/Button';
 import Counter from '../components/inputs/Counter';
 import useCart from '../hooks/useCart';
+import useEscapeKey from '../hooks/useEscapeKey';
 import useOrderModal from '../hooks/useOrderModal';
 
 interface OrderModalProps {
@@ -33,16 +34,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen = false, menu }) => {
     setShowModal(isOpen);
   }, [isOpen]);
 
-  useEffect(() => {
-    function handleEscapeKey(event: KeyboardEvent) {
-      if (event.code === 'Escape') {
-        handleClose();
-      }
-    }
-    window.addEventListener('keydown', handleEscapeKey);
-
-    return () => window.removeEventListener('keydown', handleEscapeKey);
-  }, [handleClose]);
+  useEscapeKey(handleClose);
 
   if (!orderModal.isOpen) {
     return null;
