@@ -7,8 +7,10 @@ import { navLinks } from '@/app/utils/constants';
 import { Order } from '@/app/utils/types';
 import { calculateQuantity, calculateTotal } from '@/app/utils/utils';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FiMenu, FiShoppingCart, FiUser, FiX } from 'react-icons/fi';
+import Button from '../Button';
 import { CartItem } from '../CartItem';
 import MobileNav from './MobileNav';
 
@@ -17,6 +19,8 @@ const Header = () => {
   const { showCart, toggleCart } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mCart, setMCart] = useState<Order[]>([]);
+  const router = useRouter();
+  const numOfItems = calculateQuantity(cart);
 
   const handleCloseCart = () => {
     if (!showCart) {
@@ -65,7 +69,7 @@ const Header = () => {
               <FiShoppingCart size={32} color="black" />
             </button>
             <span className="absolute -right-2 -top-2 animate-bounce rounded-full bg-amber-400 px-1.5 py-0.5 text-xs font-semibold">
-              {calculateQuantity(cart)}
+              {numOfItems}
             </span>
           </div>
 
@@ -83,9 +87,9 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed right-0 top-0 h-screen w-full max-w-screen-sm overflow-auto overflow-y-hidden bg-orange-100 p-5 transition-transform duration-500 ${
-          showCart ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`fixed right-0 top-0 h-screen w-full max-w-screen-sm overflow-auto bg-orange-100 p-5 transition-transform duration-500 ${
+          numOfItems === 0 && 'overflow-y-hidden'
+        } ${showCart ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold xl:text-2xl">My Cart</h2>
@@ -100,11 +104,18 @@ const Header = () => {
             {mCart?.map((cartItem) => (
               <CartItem key={cartItem.menu.id} {...cartItem} />
             ))}
-            <div className="mt-5 text-center">
-              <p className="text-lg font-bold uppercase">Total</p>
-              <h4 className="text-4xl font-semibold">
-                ${calculateTotal(cart)}
-              </h4>
+            <div className="my-8 flex flex-row justify-between text-center text-3xl font-bold">
+              <h4>Total</h4>
+              <h4>${calculateTotal(cart)}</h4>
+            </div>
+            <div className="flex items-center justify-center">
+              <Button
+                className="bg-orange-400 px-7 py-3 text-lg font-medium text-white/90"
+                onClick={() => router.push('/checkout')}
+              >
+                Proceed to checkout ({numOfItems}{' '}
+                {numOfItems === 1 ? 'item' : 'items'})
+              </Button>
             </div>
           </>
         ) : (
