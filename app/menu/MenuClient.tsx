@@ -38,7 +38,12 @@ const MenuClient: React.FC<MenuClientProps> = ({ menu }) => {
             </p>
             <Button
               className="mt-4 bg-orange-400 px-6 py-3 text-lg font-medium text-white/90"
-              onClick={orderModal.onOpen}
+              onClick={() => {
+                setSelectedItem(
+                  menu.filter((m) => m.name === 'Grilled Chicken')[0]
+                );
+                orderModal.onOpen();
+              }}
             >
               Order Now
             </Button>
