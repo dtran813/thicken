@@ -13,7 +13,7 @@ export const calculateTotal = (cart: Order[]) => {
 
 export const calculateQuantity = (cart: Order[]) => {
   if (!cart) {
-    return;
+    return 0;
   }
   return cart.reduce((acc, order) => acc + order.quantity, 0);
 };
