@@ -111,7 +111,10 @@ const Header = () => {
             <div className="flex items-center justify-center">
               <Button
                 className="bg-orange-400 px-7 py-3 text-lg font-medium text-white/90"
-                onClick={() => router.push('/checkout')}
+                onClick={() => {
+                  toggleCart();
+                  router.push('/checkout');
+                }}
               >
                 Proceed to checkout ({numOfItems}{' '}
                 {numOfItems === 1 ? 'item' : 'items'})

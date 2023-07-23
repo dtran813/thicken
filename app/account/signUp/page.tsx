@@ -24,18 +24,18 @@ const SignUp = () => {
     formState: { errors },
   } = useForm<FieldValues>();
 
-  const watchEmail = watch('email');
-  const watchConfirmEmail = watch('confirmEmail');
+  const email = watch('email');
+  const confirmEmail = watch('confirmEmail');
 
-  const watchPassword = watch('password');
-  const watchConfirmPassword = watch('confirmPassword');
+  const password = watch('password');
+  const confirmPassword = watch('confirmPassword');
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     if (
-      /([\d][a-z][A-Z][!@#$%^&*,.?])/.test(watchPassword) ||
-      watchPassword.length < 8 ||
-      watchPassword !== watchConfirmPassword ||
-      watchEmail !== watchConfirmEmail
+      /([\d][a-z][A-Z][!@#$%^&*,.?])/.test(password) ||
+      password.length < 8 ||
+      password !== confirmPassword ||
+      email !== confirmEmail
     ) {
       return;
     }
@@ -102,7 +102,7 @@ const SignUp = () => {
               errors={errors}
               required
             />
-            {watchEmail !== watchConfirmEmail && (
+            {email !== confirmEmail && (
               <p className="text-sm">❌ Emails must be matched</p>
             )}
 
@@ -150,30 +150,27 @@ const SignUp = () => {
 
             <div className="text-sm">
               <p>
-                {/[a-zA-Z\d!@#$%^&*,.?]{8,}/.test(watchPassword || '')
-                  ? '✅'
-                  : '❌'}{' '}
+                {/[a-zA-Z\d!@#$%^&*,.?]{8,}/.test(password || '') ? '✅' : '❌'}{' '}
                 Minimum of 8 alphanumeric characters
               </p>
               <p>
-                {/[A-Z]/.test(watchPassword || '') ? '✅' : '❌'} At least one
+                {/[A-Z]/.test(password || '') ? '✅' : '❌'} At least one
                 uppercase letter
               </p>
               <p>
-                {/[a-z]/.test(watchPassword || '') ? '✅' : '❌'} At least one
+                {/[a-z]/.test(password || '') ? '✅' : '❌'} At least one
                 lowercase letter
               </p>
               <p>
-                {/\d/.test(watchPassword || '') ? '✅' : '❌'} At least one
-                number
+                {/\d/.test(password || '') ? '✅' : '❌'} At least one number
               </p>
               <p>
-                {/[!@#$%^&*,.?]/.test(watchPassword || '') ? '✅' : '❌'} At
-                least one special character: !, @, #, $, %, ^, &, *, ., ?
+                {/[!@#$%^&*,.?]/.test(password || '') ? '✅' : '❌'} At least
+                one special character: !, @, #, $, %, ^, &, *, ., ?
               </p>
               <p>
-                {watchPassword === watchConfirmPassword ? '✅' : '❌'} Passwords
-                must be matched
+                {password === confirmPassword ? '✅' : '❌'} Passwords must be
+                matched
               </p>
             </div>
 
