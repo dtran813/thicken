@@ -1,5 +1,7 @@
-const page = () => {
-  return <div>page</div>;
+import CheckoutClient from './CheckoutClient';
+
+const Checkout = () => {
+  return <CheckoutClient />;
 };
 
-export default page;
+export default Checkout;
