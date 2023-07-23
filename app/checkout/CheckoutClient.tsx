@@ -1,6 +1,7 @@
 'use client';
 
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import Button from '../components/Button';
 import CheckoutForm from './CheckoutForm';
 
@@ -11,7 +12,11 @@ const CheckoutClient = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {};
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    toast.success(
+      'This is not supported at the moment.\nThank you for testing the website!!!'
+    );
+  };
 
   return (
     <div className="relative bg-orange-200">
